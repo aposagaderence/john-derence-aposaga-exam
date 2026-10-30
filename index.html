@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gonzaga Party Planner - Creating unforgettable celebrations through creative event planning and styling.">
+  <title>Gonzaga Party Planner</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+
+    @theme {
+      --color-orange-800: #8B2635;
+      --color-orange-900: #641B28;
+    }
+
+    
+
+    .btn-primary {
+      @apply rounded-md bg-orange-800 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-900;
+    }
+
+    .btn-secondary {
+      @apply rounded-md border border-orange-800 px-5 py-3 text-sm font-semibold text-orange-800 transition hover:bg-orange-50 dark:border-amber-400 dark:text-amber-400 dark:hover:bg-neutral-800;
+    }
+
+    .section-card {
+      @apply rounded-lg border border-stone-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900;
+    }
+
+    .form-input {
+      @apply w-full rounded-md border border-stone-300 bg-white px-4 py-3 text-sm text-stone-900 outline-none focus:border-orange-800 dark:border-neutral-700 dark:bg-neutral-950 dark:text-white;
+    }
+
+    .reveal {
+      will-change: transform, opacity;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .accent-text {
+      color: #8B2635;
+    }
+
+    .accent-bg {
+      background-color: #8B2635;
+    }
+
+    .alternate-orange .accent-text {
+      color: #C59A42;
+    }
+
+    .alternate-orange .accent-bg {
+      background-color: #C59A42;
+    }
+
+    .alternate-orange .btn-primary {
+      background-color: #A47B27;
+    }
+
+    .alternate-orange .btn-primary:hover {
+      background-color: #86611D;
+    }
+
+    .alternate-orange .btn-secondary {
+      border-color: #C59A42;
+      color: #C59A42;
+    }
+
+    .alternate-orange .accent-border {
+      border-color: #C59A42;
+    }
+  </style>
+
+
+
+</head>
+
+
+<body class="min-h-screen bg-stone-50 text-stone-900 dark:bg-neutral-950 dark:text-neutral-100">
+
+  <div id="progressBar"
+       class="accent-bg fixed left-0 top-0 z-50 h-1 w-full origin-left scale-x-0"
+       aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-40 border-b border-stone-200 bg-stone-50/95 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/95">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4" aria-label="Main navigation">
+      <a href="#home" class="flex items-center gap-2 text-lg font-bold tracking-tight">
+  <!-- Small circular logo -->
+  <img 
+    src="c:\Users\lab1\Downloads\images (1) caappppppp.png" 
+    alt="Gonzaga Party Planner Logo" 
+    class="w-20 h-20 rounded-full object-cover" 
+  />
+  <span>GONZAGA PARTY PLANNER <span class="accent-text">.</span></span>
+</a>
+
+      <div class="flex items-center gap-3 sm:gap-5">
+        <a href="#about" class="text-sm hover:text-orange-800">About</a>
+        <a href="#events" class="hidden text-sm hover:text-orange-800 sm:block">Events</a>
+        <a href="#services" class="hidden text-sm hover:text-orange-800 sm:block">Services</a>
+        <a href="#contact" class="text-sm hover:text-orange-800">Contact</a>
+      </div>
+    </nav>
+
+ 
+    
+  </header>
+
+  
+
+  <main id="home" class="mx-auto max-w-6xl px-5">
+
+    <!-- Controls -->
+    <div class="top-controls flex flex-wrap justify-center gap-3 py-6">
+      <button id="switch" type="button" class="btn-secondary">Switch Accent</button>
+      <button id="toggledark" type="button" class="btn-secondary">Toggle Dark</button>
+      <button id="replay" type="button" class="btn-primary">Replay Animation</button>
+    </div>
+
+    <!-- Introduction -->
+    <section class="profile-heading flex flex-col items-center gap-4 py-8 text-center">
+      <p class="accent-text text-xs font-semibold uppercase tracking-[0.25em]">
+        Celebrations Made Beautiful
+      </p>
+
+      <h1 class="max-w-4xl text-4xl font-bold tracking-tight sm:text-6xl">
+        Gonzaga <span class="accent-text">Party Planner</span>
+      </h1>
+
+      <p class="max-w-2xl text-base leading-7 text-stone-600 dark:text-stone-400 sm:text-lg">
+        Turning your special moments into unforgettable memories through
+        creative event planning, elegant decorations, and thoughtful details.
+      </p>
+    </section>
+
+    <!-- Hero -->
+    <section class="hero-section grid items-center gap-10 py-8 md:grid-cols-2 md:py-14">
+      <div>
+        <p class="accent-text mb-3 text-sm font-semibold uppercase tracking-widest">
+          Dream it. Plan it. Celebrate it.
+        </p>
+
+        <h2 class="text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
+          Your moments.<br>
+          <span class="accent-text">Our creativity.</span>
+        </h2>
+
+        <p class="mt-5 max-w-lg leading-7 text-stone-600 dark:text-stone-400">
+          From birthdays and weddings to debuts and corporate gatherings,
+          Gonzaga Party Planner helps make every occasion special.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#contact" class="btn-primary inline-block">Plan Your Party ↗</a>
+          <a href="#services" class="btn-secondary inline-block">Explore Services</a>
+        </div>
+
+        <p class="mt-5 text-xs text-stone-500 dark:text-stone-400">
+          Beautiful details · Stress-free planning · Memorable celebrations
+        </p>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="c:\Users\lab1\Downloads\images (2).jfif"
+          alt="Elegant celebration and event setup"
+          class="h-80 w-full rounded-lg object-cover sm:h-[450px]"
+          fetchpriority="high">
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-card reveal my-10 scroll-mt-24">
+      <div class="grid items-center gap-8 md:grid-cols-2">
+        <div>
+          <p class="accent-text mb-2 text-xs font-semibold uppercase tracking-widest">
+            Welcome to Gonzaga
+          </p>
+
+          <h2 class="text-3xl font-bold">Making Every Occasion Special</h2>
+
+          <p class="mt-4 leading-7 text-stone-600 dark:text-stone-400">
+            At Gonzaga Party Planner, we believe every celebration deserves
+            to be memorable. We bring your ideas to life through careful
+            planning, creative styling, and attention to detail.
+          </p>
+
+          <p class="mt-4 leading-7 text-stone-600 dark:text-stone-400">
+            Whether you are planning an intimate gathering or a grand
+            celebration, our goal is to help create an event that reflects
+            your personality, style, and vision.
+          </p>
+        </div>
+<img
+    src="c:\Users\lab1\Downloads\images (4).jfif"
+    alt="Beautiful debut celebration by Gonzaga Party Planner"
+    class="h-72 w-full rounded-lg object-cover sm:h-96"
+    loading="eager"
+    onerror="this.onerror=null; this.src='https://placehold.co/800x600/171717/ffffff?text=Image+Not+Found';"
+/>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section id="events" class="section-card reveal my-10 scroll-mt-24">
+      <div class="mb-7">
+        <p class="accent-text mb-2 text-xs font-semibold uppercase tracking-widest">
+          Celebrate your way
+        </p>
+
+        <h2 class="text-3xl font-bold">Events We Plan</h2>
+
+        <p class="mt-3 max-w-2xl leading-7 text-stone-600 dark:text-stone-400">
+          We help bring different kinds of celebrations together with style,
+          organization, and a personal touch.
+        </p>
+      </div>
+
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+        <article class="overflow-hidden rounded-lg border border-stone-200 dark:border-neutral-800">
+          <img
+            src="c:\Users\lab1\Downloads\images (6).jfif"
+            alt="Colorful birthday party decorations"
+            class="h-48 w-full object-cover"
+            loading="lazy">
+          <div class="p-5">
+            <p class="accent-text text-xs font-semibold uppercase tracking-widest">01 / Birthdays</p>
+            <h3 class="mt-3 text-xl font-bold">Birthday Celebrations</h3>
+            <p class="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-400">
+              Personalized birthday themes, decorations, and fun party setups
+              for every age.
+            </p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-lg border border-stone-200 dark:border-neutral-800">
+          <img
+            src="c:\Users\lab1\Downloads\images (5).jfif"
+            alt="Wedding celebration setup"
+            class="h-48 w-full object-cover"
+            loading="lazy">
+          <div class="p-5">
+            <p class="accent-text text-xs font-semibold uppercase tracking-widest">02 / Weddings</p>
+            <h3 class="mt-3 text-xl font-bold">Weddings</h3>
+            <p class="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-400">
+              Romantic styling and coordinated details for your special day.
+            </p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-lg border border-stone-200 dark:border-neutral-800">
+          <img
+            src="c:\Users\lab1\Downloads\indian-wedding-reception-dinner-table-2023-11-27-05-09-32-utc.jpg"
+            alt="Elegant event venue"
+            class="h-48 w-full object-cover"
+            loading="lazy">
+          <div class="p-5">
+            <p class="accent-text text-xs font-semibold uppercase tracking-widest">03 / Debuts</p>
+            <h3 class="mt-3 text-xl font-bold">Debut Parties</h3>
+            <p class="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-400">
+              Elegant themes and event coordination for a memorable milestone.
+            </p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-lg border border-stone-200 dark:border-neutral-800">
+          <img
+            src="c:\Users\lab1\Downloads\pm1-atlantic-council-global-energy-forum-ballroom-stage-purple-light.jpg"
+            alt="Corporate event gathering"
+            class="h-48 w-full object-cover"
+            loading="lazy">
+          <div class="p-5">
+            <p class="accent-text text-xs font-semibold uppercase tracking-widest">04 / Corporate</p>
+            <h3 class="mt-3 text-xl font-bold">Corporate Events</h3>
+            <p class="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-400">
+              Organized company gatherings, launches, and professional events.
+            </p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-lg border border-stone-200 dark:border-neutral-800">
+          <img
+            src="c:\Users\lab1\Downloads\images (7).jfif"
+            alt="Celebration table with party decorations"
+            class="h-48 w-full object-cover"
+            loading="lazy">
+          <div class="p-5">
+            <p class="accent-text text-xs font-semibold uppercase tracking-widest">05 / Family</p>
+            <h3 class="mt-3 text-xl font-bold">Family Gatherings</h3>
+            <p class="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-400">
+              Thoughtful setups for anniversaries, reunions, and family parties.
+            </p>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-lg border border-stone-200 dark:border-neutral-800">
+          <img
+            src="c:\Users\lab1\Downloads\0ebee80b5c0437ebaa7db3f4c28df0c8.jpg"
+            alt="Decorated venue ready for a special occasion"
+            class="h-48 w-full object-cover"
+            loading="lazy">
+          <div class="p-5">
+            <p class="accent-text text-xs font-semibold uppercase tracking-widest">06 / Special</p>
+            <h3 class="mt-3 text-xl font-bold">Special Occasions</h3>
+            <p class="mt-2 text-sm leading-6 text-stone-600 dark:text-stone-400">
+              Baby showers, engagement parties, holiday celebrations, and more.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  
+<section id="services" class="section-card reveal my-10 scroll-mt-24">
+  <div class="mb-6">
+    <p class="accent-text mb-2 text-xs font-semibold uppercase tracking-widest">
+      What we offer
+    </p>
+    <h2 class="text-3xl font-bold">Our Services</h2>
+    <p class="mt-3 text-stone-600 dark:text-stone-400">
+      We make every celebration special and stress-free.
+    </p>
+  </div>
+
+  <div class="grid gap-4 sm:grid-cols-3">
+    <article class="rounded-lg border border-stone-200 p-5 dark:border-neutral-800">
+      <h3 class="font-bold">Event Planning</h3>
+      <p class="mt-2 text-sm text-stone-600 dark:text-stone-400">
+        We organize your event from start to finish.
+      </p>
+    </article>
+
+    <article class="rounded-lg border border-stone-200 p-5 dark:border-neutral-800">
+      <h3 class="font-bold">Decoration</h3>
+      <p class="mt-2 text-sm text-stone-600 dark:text-stone-400">
+        Beautiful decorations that match your theme.
+      </p>
+    </article>
+
+    <article class="rounded-lg border border-stone-200 p-5 dark:border-neutral-800">
+      <h3 class="font-bold">Catering & Coordination</h3>
+      <p class="mt-2 text-sm text-stone-600 dark:text-stone-400">
+        Food, venue, and event activities organized for you.
+      </p>
+    </article>
+  </div>
+</section>
+
+    <!-- Call to Action -->
+    <section class="reveal my-10 rounded-lg bg-stone-900 px-6 py-10 text-white sm:px-10 sm:py-14 dark:bg-neutral-900">
+      <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-amber-400">
+        Your celebration starts here
+      </p>
+
+      <h2 class="max-w-2xl text-3xl font-bold sm:text-4xl">
+        Let's create something unforgettable.
+      </h2>
+
+      <p class="mt-4 max-w-2xl leading-7 text-stone-300">
+        Share your vision with Gonzaga Party Planner and let us help you
+        turn your special occasion into a beautiful memory.
+      </p>
+
+      <a href="#contact" class="mt-6 inline-block rounded-md bg-amber-500 px-5 py-3 text-sm font-semibold text-stone-950 transition hover:bg-amber-400">
+        Start Planning 
+      </a>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-card reveal my-10 scroll-mt-24">
+      <div class="grid gap-8 md:grid-cols-2">
+        <div>
+          <p class="accent-text mb-2 text-xs font-semibold uppercase tracking-widest">
+            Get in touch
+          </p>
+
+          <h2 class="text-3xl font-bold">Book Your Celebration</h2>
+
+          <p class="mt-4 leading-7 text-stone-600 dark:text-stone-400">
+            Tell us about your event, preferred date, estimated number of guests,
+            and the ideas you have in mind.
+          </p>
+
+          <div class="mt-6 space-y-2 text-sm text-stone-600 dark:text-stone-400">
+            <p><strong class="text-stone-900 dark:text-white">Business:</strong> Gonzaga Party Planner</p>
+            <p><strong class="text-stone-900 dark:text-white">Services:</strong> Planning, styling, coordination</p>
+            <p><strong class="text-stone-900 dark:text-white">Events:</strong> Birthdays, weddings, debuts, and more</p>
+          </div>
+        </div>
+
+        <form id="contactForm" action="#" class="space-y-4">
+          <div>
+            <label for="name" class="mb-2 block text-sm font-medium">Full Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required class="form-input">
+          </div>
+
+          <div>
+            <label for="email" class="mb-2 block text-sm font-medium">Email Address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required class="form-input">
+          </div>
+
+          <div>
+            <label for="eventType" class="mb-2 block text-sm font-medium">Type of Event</label>
+            <select id="eventType" name="eventType" required class="form-input">
+              <option value="">Select an event</option>
+              <option>Birthday Party</option>
+              <option>Wedding</option>
+              <option>Debut Party</option>
+              <option>Corporate Event</option>
+              <option>Family Gathering</option>
+              <option>Baby Shower</option>
+              <option>Other Event</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="eventDate" class="mb-2 block text-sm font-medium">Preferred Event Date</label>
+            <input id="eventDate" name="eventDate" type="date" class="form-input">
+          </div>
+
+          <div>
+            <label for="guests" class="mb-2 block text-sm font-medium">Estimated Number of Guests</label>
+            <input id="guests" name="guests" type="number" min="1" placeholder="e.g. 100" class="form-input">
+          </div>
+
+          <div>
+            <label for="message" class="mb-2 block text-sm font-medium">Event Details</label>
+            <textarea id="message" name="message" rows="4" placeholder="Describe your theme, venue, budget, and requirements..." required class="form-input"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary w-full sm:w-auto">
+            Send
+          </button>
+
+          <p id="formNotice" class="text-sm text-stone-500 dark:text-stone-400" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="reveal border-t border-stone-200 py-8 text-center dark:border-neutral-800">
+      <p class="text-lg font-bold">
+        GONZAGA<span class="accent-text">.</span>
+      </p>
+
+      <p class="mt-2 text-sm text-stone-600 dark:text-stone-400">
+        Thoughtful planning. Beautiful celebrations. Lasting memories.
+      </p>
+
+      <p class="mt-4 text-xs text-stone-500">
+        © <span id="year"></span> Gonzaga Party Planner. All rights reserved.
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- Required order: GSAP, ScrollTrigger, then script.js -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
